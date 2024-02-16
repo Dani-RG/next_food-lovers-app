@@ -4,6 +4,11 @@ import MealsGrid from "@/components/meals/meals-grid";
 import { getMeals } from "@/lib/meals";
 import { Suspense } from "react";
 
+export const metadata = {
+  title: "All Meals",
+  description: "Browse the delicious meals shared by our vibrant community",
+};
+
 async function Meals() {
   const meals = await getMeals();
 
@@ -16,7 +21,7 @@ export default function MealsPage() {
       <header className={classes.header}>
         <h1>
           Delicious meals, created{""}
-          <span className={classes.highlight}>by you</span>
+          <span className={classes.highlight}> by you</span>
         </h1>
         <p>Choose your favorite recipe and cook it yourself.</p>
         <p className={classes.cta}>
